@@ -1,2 +1,4 @@
-# test1
-test1
+docker-compose build --no-cache
+
+docker-compose up
+
