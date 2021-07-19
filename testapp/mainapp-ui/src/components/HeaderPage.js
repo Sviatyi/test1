@@ -30,11 +30,11 @@ export const HeaderPage = () =>{
                 <div className={"head-class"}>
                     <div className={"free-space-left"}/>
                     <li id={"users"} className={"header-list"} onClick={ function (){
-                        window.location.assign('http://localhost:8000/users')
+                        window.location.assign('http://localhost:3000/users')
                         }
                     }>Users</li>
                     <li id={"groups"} className={"header-list"} onClick={ function (){
-                        window.location.assign('http://localhost:8000/groups')
+                        window.location.assign('http://localhost:3000/groups')
                         }
                     }>Groups</li>
                     <div className={"free-space-right"}/>

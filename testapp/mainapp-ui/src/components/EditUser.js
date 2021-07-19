@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 import {Button, Form} from "semantic-ui-react";
 import TextField from '@material-ui/core/TextField';
 
-import moment from "moment";
 import axios from "axios";
 
 
@@ -44,7 +43,7 @@ export const EditUser = () =>{
                         </Form.Field>
                     </td>
                     <td style={{"width": "200px"}}><Button className={"add-user-button"} onClick={function (){
-                        window.location.assign('http://localhost:8000/users')
+                        window.location.assign('http://localhost:3000/users')
                     }}>Cancel</Button></td>
 
                 </table>
@@ -68,7 +67,7 @@ export const EditUser = () =>{
                                 alert("BAD DATA!!!");
                             }
                             else {
-                                window.location.assign('http://localhost:8000/users')
+                                window.location.assign('http://localhost:3000/users')
                             }
                         }
                         }>Edit user</Button>

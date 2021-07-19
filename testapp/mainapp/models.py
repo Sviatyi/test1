@@ -42,6 +42,6 @@ class Group(models.Model):
 
     def delete(self, using=None, keep_parents=True):
         if len(User.objects.all().filter(group=self.id)) > 0:
-            return Response(403)
+            return Response().status_code(403)
         return super().delete(keep_parents=keep_parents)
 

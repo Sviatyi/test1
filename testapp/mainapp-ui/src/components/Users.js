@@ -41,7 +41,7 @@ export const Users = () =>{
                             <td style={{"width": "200px"}} key={u.id}>{u.group !== null ? u.group.name : ""}</td>
                             <td style={{"width": "200px"}} key={u.id}>
                                 <Button style={{"margin-right": "15px"}} className={"add-user-button"} onClick={ function () {
-                                    window.location.assign('http://localhost:8000/users-edit?id='+u.id)
+                                    window.location.assign('http://localhost:3000/users-edit?id='+u.id)
                                 }}>Edit</Button>
                                 <Button className={"add-user-button"} onClick={async () => {
                                     const res = await fetch('http://localhost:8000/user/'+u.id+'/', {
@@ -51,7 +51,7 @@ export const Users = () =>{
                                         alert("SOMETHING WENT WRONG!!!")
                                     }
                                     else {
-                                        window.location.assign('http://localhost:8000/users')
+                                        window.location.assign('http://localhost:3000/users')
                                     }
                                 }}>Delete</Button>
                             </td>

@@ -33,7 +33,7 @@ export const Groups = () =>{
                             <td style={{"width": "500px"}} key={u.id}>{u.description}</td>
                             <td style={{"width": "200px"}} key={u.id}>
                                 <Button style={{"margin-right": "15px"}} className={"add-user-button"} onClick={ function () {
-                                    window.location.assign('http://localhost:8000/groups-edit?id='+u.id)
+                                    window.location.assign('http://localhost:3000/groups-edit?id='+u.id)
                                 }}>Edit</Button>
                                 <Button className={"add-user-button"} onClick={async () => {
                                     const res = await fetch('http://localhost:8000/group/'+u.id+'/', {
@@ -43,7 +43,7 @@ export const Groups = () =>{
                                         alert("You can not delete group with users")
                                     }
                                     else {
-                                        window.location.assign('http://localhost:8000/groups')
+                                        window.location.assign('http://localhost:3000/groups')
                                     }
                                 }}>Delete</Button>
                             </td>

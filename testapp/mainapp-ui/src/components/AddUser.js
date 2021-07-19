@@ -33,7 +33,7 @@ export const AddUser = () =>{
                             </Form.Field>
                         </td>
                         <td style={{"width": "200px"}}><Button className={"add-user-button"} onClick={function (){
-                            window.location.assign('http://localhost:8000/users')
+                            window.location.assign('http://localhost:3000/users')
                         }}>Cancel</Button></td>
 
                 </table>
@@ -58,7 +58,7 @@ export const AddUser = () =>{
                                 alert("BAD DATA!!!");
                             }
                             else {
-                                window.location.assign('http://localhost:8000/users')
+                                window.location.assign('http://localhost:3000/users')
                             }
                         }
                         }>Add user</Button>

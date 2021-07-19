@@ -29,5 +29,16 @@ services:
       - "8000:8000"
     networks: [ 'mynetwork' ]
 
-
+  front:
+    build:
+      context: ./mainapp-ui
+      dockerfile: Dockerfile
+    networks: [ 'mynetwork' ]
+    ports:
+      - "3000:3000"
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    environment:
+      - CHOKIDAR_USEPOLLING=true
 networks: {mynetwork: {}}

@@ -18,18 +18,19 @@ from django.urls import path, include
 from rest_framework import routers
 from mainapp.views import UserViewSet, GroupViewSet, index
 
+
 router = routers.SimpleRouter()
 router.register("user", UserViewSet, basename="user")
 router.register("group", GroupViewSet, basename="group")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('users', index),
-    path('groups', index),
-    path('users-add', index),
-    path('groups-add', index),
-    path('users-edit', index),
-    path('groups-edit', index),
+    # path('users', index),
+    # path('groups', index),
+    # path('users-add', index),
+    # path('groups-add', index),
+    # path('users-edit', index),
+    # path('groups-edit', index),
 ]
 
 urlpatterns += router.urls

@@ -33,7 +33,7 @@ export const AddGroup = () =>{
                         </Form.Field>
                     </td>
                     <td style={{"width": "200px"}}><Button className={"add-user-button"} onClick={function (){
-                        window.location.assign('http://localhost:8000/groups')
+                        window.location.assign('http://localhost:3000/groups')
                     }}>Cancel</Button></td>
 
                 </table>
@@ -55,7 +55,7 @@ export const AddGroup = () =>{
                                 alert("BAD DATA!!!");
                             }
                             else {
-                                window.location.assign('http://localhost:8000/groups')
+                                window.location.assign('http://localhost:3000/groups')
                             }
                         }
                         }>Add group</Button>
